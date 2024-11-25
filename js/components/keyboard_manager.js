@@ -13,15 +13,15 @@ export function setupKeyboardHandling() {
       }
     });
 
-    input.addEventListener('blur', () => {
-      activeInputCount--; // Decrementa il contatore quando un input perde focus
-      // Usa un timeout per dare tempo alla tastiera di chiudersi
-      setTimeout(() => {
-        if (activeInputCount === 0) {
-          keyboardDismissBtn.classList.remove('show');
-        }
-      }, 1000); 
-    });
+    // input.addEventListener('blur', () => {
+    //   activeInputCount--; // Decrementa il contatore quando un input perde focus
+    //   // Usa un timeout per dare tempo alla tastiera di chiudersi
+    //   setTimeout(() => {
+    //     if (activeInputCount === 0) {
+    //       keyboardDismissBtn.classList.remove('show');
+    //     }
+    //   }, 1000); 
+    // });
 
     input.addEventListener('touchstart', () => {
       if (window.innerWidth <= 768) {
