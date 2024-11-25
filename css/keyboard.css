@@ -9,7 +9,7 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -23,7 +23,10 @@
 } */
 
 @media (max-width: 768px) {
-  .keyboard-dismiss.show {
-      display: flex;
+  .keyboard-dismiss {
+    display: flex; /* Assicura che sia visibile anche su schermi più piccoli */
   }
+  /* .keyboard-dismiss.show {
+      display: flex;
+  } */
 }
