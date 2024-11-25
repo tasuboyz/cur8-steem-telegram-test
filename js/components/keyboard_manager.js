@@ -3,12 +3,18 @@ export function setupKeyboardHandling() {
   const keyboardDismissBtn = document.getElementById('keyboardDismiss');
   
   let isKeyboardDismissBtnPressed = false;
+  let activeInputCount = 0; // Contatore degli input attivi
 
   inputs.forEach(input => {
     input.addEventListener('focus', () => {
       if (window.innerWidth <= 768) {
         keyboardDismissBtn.classList.add('show');
+        activeInputCount++; // Incrementa il contatore quando un input riceve focus
       }
+    });
+
+    input.addEventListener('blur', () => {
+      keyboardDismissBtn.classList.remove('show');
     });
 
     input.addEventListener('touchstart', () => {
@@ -20,6 +26,7 @@ export function setupKeyboardHandling() {
 
   keyboardDismissBtn.addEventListener('click', () => {
     document.activeElement.blur();
+    keyboardDismissBtn.classList.remove('show');
     isKeyboardDismissBtnPressed = true; // Imposta il flag quando il pulsante viene premuto
   });
 

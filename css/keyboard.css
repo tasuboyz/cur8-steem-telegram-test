@@ -23,10 +23,7 @@
 } */
 
 @media (max-width: 768px) {
-  .keyboard-dismiss {
-    display: flex; /* Assicura che sia visibile anche su schermi più piccoli */
-  }
-  /* .keyboard-dismiss.show {
+  .keyboard-dismiss.show {
       display: flex;
-  } */
+  }
 }
