@@ -20,7 +20,7 @@ export function setupKeyboardHandling() {
         if (activeInputCount === 0) {
           keyboardDismissBtn.classList.remove('show');
         }
-      }, 300); 
+      }, 1000); 
     });
 
     input.addEventListener('touchstart', () => {
