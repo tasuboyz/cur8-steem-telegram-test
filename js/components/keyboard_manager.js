@@ -13,7 +13,8 @@ export function setupKeyboardHandling() {
     });
 
     input.addEventListener('blur', () => {
-      keyboardDismissBtn.classList.remove('show');
+      //keyboardDismissBtn.classList.remove('show');
+      keyboardDismissBtn.style.bottom = '90px'; // Ripristina la posizione a 90px quando l'input perde il focus
     });
 
     input.addEventListener('touchstart', () => {
@@ -25,13 +26,13 @@ export function setupKeyboardHandling() {
 
   keyboardDismissBtn.addEventListener('click', () => {
     document.activeElement.blur();
-    keyboardDismissBtn.classList.remove('show');
+    //keyboardDismissBtn.classList.remove('show');
     isKeyboardDismissBtnPressed = true;
+    keyboardDismissBtn.style.bottom = '90px'; // Assicurati che il pulsante sia a 90px dopo il clic
   });
 
   document.addEventListener('touchend', (e) => {
     const activeElement = document.activeElement;
-    keyboardDismissBtn.style.bottom = '90px';
     if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
       if (!activeElement.contains(e.target) && !isKeyboardDismissBtnPressed) {
         activeElement.blur();
