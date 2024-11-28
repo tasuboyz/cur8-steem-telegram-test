@@ -39,11 +39,11 @@ export function setupKeyboardHandling() {
   });
 
   // Aggiungi l'evento resize per gestire l'apertura della tastiera
-  window.addEventListener('resize', () => {
-    if (window.innerHeight < 600) { // Condizione per rilevare l'apertura della tastiera
-      keyboardDismissBtn.style.bottom = '300px'; // Alza il bottone
-    } else {
-      keyboardDismissBtn.style.bottom = '90px'; // Ripristina la posizione originale
-    }
-  });
+  // window.addEventListener('resize', () => {
+  //   if (window.innerHeight < 600) { // Condizione per rilevare l'apertura della tastiera
+  //     keyboardDismissBtn.style.bottom = '300px'; // Alza il bottone
+  //   } else {
+  //     keyboardDismissBtn.style.bottom = '90px'; // Ripristina la posizione originale
+  //   }
+  // });
 }
